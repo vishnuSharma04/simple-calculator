@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:5500/calculator/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    
+    
+<link rel="stylesheet" href="./Online Calculator_files/style.css"></head>
+
+<body>
+    <h1 class="heading">SIMPLE CALCULATOR</h1>
+    <div id="calculator">
+        <input type="text" id="display" max="10">
+        <div class="container">
+            <button class="button" onclick="currentDisplay = &#39; &#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;"><b>C</b></button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;1&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">1</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;2&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">2</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;3&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">3</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;4&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">4</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;5&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">5</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;6&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">6</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;7&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">7</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;8&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">8</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;9&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">9</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;0&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">0</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;+&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">+</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;-&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">-</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;*&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">x</button>
+            <button class="button" onclick="currentDisplay = currentDisplay + &#39;/&#39;;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">/</button>
+            <button class="button" onclick="let result = eval(currentDisplay)
+            currentDisplay = result;
+            document.querySelector(&#39;#display&#39;).value = currentDisplay;">=</button>
+        </div>
+    </div>
+    <script>
+        let currentDisplay = " ";
+        document.querySelector("#display") = currentDisplay;
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
